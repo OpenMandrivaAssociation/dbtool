@@ -11,7 +11,6 @@ Patch1:		dbtool-1.6-gcc411.diff
 BuildRequires:	gdbm-devel
 BuildRequires:	pcre-devel
 #BuildRequires:	db4-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 dbtool can be used to store and retrieve data in a key/value format
