@@ -1,7 +1,7 @@
 Summary:	Command Line Tool for GDBM
 Name:		dbtool
 Version:	1.6
-Release:	%mkrel 7
+Release:	%mkrel 8
 License:	GPLv2
 Group:		Databases
 URL:		http://www.daemon.de/DBTOOL
