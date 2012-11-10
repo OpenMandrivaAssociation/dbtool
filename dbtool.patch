@@ -1,0 +1,41 @@
+--- dbtool.h.orig	Sat Mar 22 21:37:47 2003
++++ dbtool.h	Sun Mar 23 11:55:12 2003
+@@ -61,12 +61,12 @@
+ #endif
+ 
+ /* the name of the environment variable to be used if -d is omited */
+-#ifndef DB
+-#define DB "DB_DATABASE"
++#ifndef DB_VARNAME
++#define DB_VARNAME "DB_DATABASE"
+ #endif
+ 
+-#ifndef PW
+-#define PW "DB_PASSPHRASE"
++#ifndef PW_VARNAME
++#define PW_VARNAME "DB_PASSPHRASE"
+ #endif
+ 
+ #include <string>
+--- dbtool.cc.orig	Sat Mar 22 21:38:20 2003
++++ dbtool.cc	Sun Mar 23 11:55:42 2003
+@@ -129,7 +129,7 @@
+ string readpass() {
+   char *pass;
+   char *envpass;
+-  envpass = getenv(PW);
++  envpass = getenv(PW_VARNAME);
+   if(envpass != NULL) {
+     string pw = envpass;
+     return pw;
+--- config.cc.orig	Sat Mar 22 21:36:41 2003
++++ config.cc	Sun Mar 23 11:55:25 2003
+@@ -55,7 +55,7 @@
+ Config::Config() {
+   /* konstructor */ 
+   pkg = PACKAGE;
+-  default_db = DB;
++  default_db = DB_VARNAME;
+ 
+   usage =
+     "\nUsage: " + pkg + " -d database [DirusSfwVhtRFpP] [-k key] [-v value]\n"

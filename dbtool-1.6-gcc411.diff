@@ -1,0 +1,30 @@
+diff -Naur dbtool-1.6/cipher.h dbtool-1.6.oden/cipher.h
+--- dbtool-1.6/cipher.h	2003-03-22 15:39:42.000000000 -0500
++++ dbtool-1.6.oden/cipher.h	2006-11-20 14:39:33.000000000 -0500
+@@ -62,12 +62,12 @@
+   MD5Digest dig;
+   unsigned char key[32];
+   string blah;
+-  const char* cipher::error(int num);
++  const char* error(int num);
+ 
+  public:
+   cipher() {};
+   ~cipher() {};
+-  void cipher::init(const string & phrase);
++  void init(const string & phrase);
+   string encrypt(const string& source);
+   string decrypt(const string& source);
+ };
+diff -Naur dbtool-1.6/config.h dbtool-1.6.oden/config.h
+--- dbtool-1.6/config.h	2003-03-22 15:37:59.000000000 -0500
++++ dbtool-1.6.oden/config.h	2006-11-20 14:41:16.000000000 -0500
+@@ -71,7 +71,7 @@
+ 
+  public:
+   Config();
+-  void Config::args(int argc, char *argv[]);
++  void args(int argc, char *argv[]);
+   int parse();
+   int     force, command, with, reverse, readonly, encrypted;
+   string  filename, key, value, usage, token, phrase;
