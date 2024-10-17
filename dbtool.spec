@@ -4,7 +4,7 @@ Version:	1.6
 Release:	10
 License:	GPLv2+
 Group:		Databases
-Url:		http://www.daemon.de/DBTOOL
+Url:		https://www.daemon.de/DBTOOL
 Source0:	ftp://ftp.daemon.de/scip/Apps/dbtool/dbtool-%{version}.tar.bz2
 Patch0:		dbtool.patch
 Patch1:		dbtool-1.6-gcc411.diff
