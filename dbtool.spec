@@ -8,6 +8,11 @@ Url:		https://www.daemon.de/DBTOOL
 Source0:	ftp://ftp.daemon.de/scip/Apps/dbtool/dbtool-%{version}.tar.bz2
 Patch0:		dbtool.patch
 Patch1:		dbtool-1.6-gcc411.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gdbm-devel
 BuildRequires:	pkgconfig(libpcre)
 
